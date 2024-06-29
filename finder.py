@@ -39,7 +39,7 @@ for list in free_classrooms:
 
 free_classrooms = free_classrooms_translated
 
-bad_ids = [-52, -53, -54, -93, -94, -95, -96, -70, -60, -99, -98, -100, -97, -101, -2, -69]
+bad_ids = [-52, -53, -54, -93, -94, -95, -96, -70, -60, -99, -98, -100, -97, -101, -2, -69, -102]
 
 volno_jaroska = []
 volno_pricni = []
@@ -53,8 +53,9 @@ for lesson in free_classrooms:
         floor_list = []
         for classroom in lesson:
             if not classroom["classroom_id"] in bad_ids:
-                 if classroom["name"].split(" - ")[1][0] == str(floor + 2):
-                     floor_list.append(classroom)
+                print(classroom["name"])
+                if classroom["name"].split(" - ")[1][0] == str(floor + 2):
+                    floor_list.append(classroom)
         floor_list.sort(key=myFunc)
         lesson_list.append(floor_list)
     volno_jaroska.append(lesson_list)
