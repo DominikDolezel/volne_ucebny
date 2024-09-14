@@ -2,21 +2,18 @@
 
 ## finder.py
 
-Po spuštění tohoto souboru dojde k načtení dat z Edupage a k jejich uložení do souboru data.json. Soubor je nutné spouštět přes virtuální prostředí env
+Po spuštění tohoto souboru dojde k načtení dat z Edupage a k jejich uložení do souboru data.json. Je nutné mít natinstalovaané `edupage_api`.
 
-linux
+K instalaci dojde pomocí příkazu
 
-``source/env/bin/activate``
-
-ws
-
-``env\Scripts\activate.bat``
+``pip install -r requirements.txt``
 
 python soubor se pak spustí příkazem
 
 ``python finder.py``
 
-Před spuštěním souboru je nutné na řádek 8 připsat do uvozovek jako parametry přihlašovací jméno a heslo na Edupage.
+Před spuštěním souboru je nutné upravit `config.json` tak, aby v něm byly 
+platné přihlašovací údaje na edupage.
 
 ## index.php
 
